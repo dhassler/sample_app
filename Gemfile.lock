@@ -47,6 +47,9 @@ GEM
     erubis (2.7.0)
     execjs (1.2.4)
       multi_json (~> 1.0)
+    faker (0.9.5)
+      i18n (~> 0.4)
+    geocoder (1.0.2)
     hike (1.2.0)
     i18n (0.6.0)
     jquery-rails (1.0.12)
@@ -131,6 +134,8 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.1.0.rc)
+  faker
+  geocoder
   jquery-rails
   rails (= 3.1.0.rc5)
   rspec

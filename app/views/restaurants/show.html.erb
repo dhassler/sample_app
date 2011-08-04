@@ -1,20 +1,17 @@
-<p id="notice"><%= notice %></p>
+<h1><%= @restaurant.name %></h1>
 
-<p>
-  <b>Name:</b>
-  <%= @restaurant.name %>
-</p>
+<%= form_for(@order, :url => orders_new_path, :method => "post") do |f| %>
 
-<p>
-  <b>Latitude:</b>
-  <%= @restaurant.latitude %>
-</p>
+<% @restaurant.menu_sections.each do |section| %>
 
-<p>
-  <b>Longitude:</b>
-  <%= @restaurant.longitude %>
-</p>
+	<div class="menusection"><%= section.name %></div>
 
+	<% section.menu_items.each do |menu_item| %>
+	<%= text_field_tag "order_items[" + menu_item.id.to_s + "]",nil, :size => 2 %><%= menu_item.name %> <%= menu_item.price %><br/>
+	<% end %>
 
-<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
-<%= link_to 'Back', restaurants_path %>
+<% end %>
+
+<%= submit_tag "Submit order" %>
+<% end %>
+

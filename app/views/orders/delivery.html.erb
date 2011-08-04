@@ -1,0 +1,12 @@
+<h1>Order Details</h1>
+
+
+<%= form_for(@order, :url => orders_save_path) do |f| %>
+
+	<%= hidden_field_tag 'order[order_items]', @order.order_items.to_s %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<%= f.label :phone %>
+	<%= f.text_field :phone %>
+	<%= f.submit "Submit order" %>
+<% end %>

@@ -1,0 +1,9 @@
+<h1>Search Results</h1>
+
+<p>You searched on: <%= @query_string %></p>
+
+<%= render @restaurants %>
+
+
+<h3>New search</h3>
+<%= render :partial => 'search_form' %>

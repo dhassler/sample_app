@@ -10,9 +10,11 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'geocoder'
 
 group :development do
   gem 'rspec-rails'
+  gem 'faker'
 end
 
 group :test do

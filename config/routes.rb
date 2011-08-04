@@ -1,5 +1,13 @@
 SampleApp::Application.routes.draw do
+  post "orders/new"
+  post "orders/confirm"
+  post "orders/save"
+
+  root :to => 'welcome#index'
+
   resources :restaurants
+  
+  match '/search' => 'welcome#search', :via => :get
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
