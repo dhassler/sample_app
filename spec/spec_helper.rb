@@ -25,3 +25,8 @@ RSpec.configure do |config|
   # instead of true.
   config.use_transactional_fixtures = true
 end
+
+def test_sign_in(user)
+  session[:user_id] = user.id
+end
+

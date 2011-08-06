@@ -1,6 +1,8 @@
-<h1><%= @restaurant.name %></h1>
+<h2><%= @restaurant.name %></h2>
 
 <%= form_for(@order, :url => orders_new_path, :method => "post") do |f| %>
+
+<%= hidden_field_tag "order[restaurant_id]", @restaurant.id %>
 
 <% @restaurant.menu_sections.each do |section| %>
 

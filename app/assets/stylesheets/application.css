@@ -5,3 +5,15 @@
  *= require_self
  *= require_tree . 
 */
+
+body {
+	background-color: #AAA;
+}
+
+.container { background-color: white; padding: 10px; }
+
+.footer {
+	margin-top: 20px;
+
+	background-color: #DDD;
+}

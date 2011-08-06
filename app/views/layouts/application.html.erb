@@ -1,20 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SampleApp</title>
+  <title>FoodFinder</title>
+<%= stylesheet_link_tag 'blueprint/screen', :media => "screen, projection" %>
+<%= stylesheet_link_tag 'blueprint/print', :media => "print" %>
+<!--[if lt IE8]>
+<%= stylesheet_link_tag 'blueprint/ie' %>
+<![endif] -->
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 	
+<div class="container">
+	
+	<%= render :partial => '/layouts/login_logout' %>
+	
+	<h1>Food Finder</h1>
+	<hr/>
+	
+<div class="span-24 content">
+
+
+
 <% flash.each do |key, value| %>
-<div class="flash <%= key %>"><%= value %></div>
+	<div class="flash <%= key %>"><%= value %></div>
 <% end %>
+
 
 <%= yield %>
 
-<%= debug(params) if Rails.env.development? %>
+<!-- <%= debug(params) if Rails.env.development? %> -->
 
+</div>
+
+<div class="span-24 footer">
+Sample app by David Hassler / dhassler@gmail.com
+</div>
+
+</div>
 </body>
 </html>

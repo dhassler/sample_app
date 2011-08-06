@@ -1,13 +1,21 @@
-<h1>Order Details</h1>
+<h2>Order Details: <%= @order.restaurant.name %></h2>
 
 <%= render :partial => 'order_item_summary' %>
 
+<h3>Delivery Info</h3>
 <%= form_for(@order, :url => orders_save_path) do |f| %>
+	<%= f.hidden_field :restaurant_id %>
 
 	<%= hidden_field_tag 'order[order_items]', @order.order_items.to_s %>
+	<div class="field">
 	<%= f.label :name %>
 	<%= f.text_field :name %>
+	</div>
+	<div class="field">
 	<%= f.label :phone %>
 	<%= f.text_field :phone %>
+	</div>
+	<div class="action">
 	<%= f.submit "Submit order" %>
+	</div>
 <% end %>

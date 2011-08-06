@@ -1,11 +1,22 @@
 SampleApp::Application.routes.draw do
+
+  resources :restaurants do
+    member do
+      get 'orders'
+    end
+  end
+  
+  resources :sessions, :only => [:new, :create, :destroy]
+  resources :users,    :only => [:new, :create]
+  
+  get "login" => "sessions#new"
+  get "logout" => "sessions#destroy"
+    
   post "orders/new"
   post "orders/confirm"
   post "orders/save"
 
   root :to => 'welcome#index'
-
-  resources :restaurants
   
   match '/search' => 'welcome#search', :via => :get
 

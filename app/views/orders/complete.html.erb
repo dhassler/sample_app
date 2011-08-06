@@ -1,6 +1,10 @@
-<h1>Your order is complete!</h1>
-<h2>Enjoy your delicious food.</h2>
+<h2>Your order is complete!</h2>
+<h3>Enjoy your delicious food.</h3>
 
+<p>
+Restaurant: <%= @order.restaurant.name %><br/>
 Name: <%= @order.name %><br/>
 Phone: <%= @order.phone %>
+</p>
+
 <%= render :partial => 'order_item_summary' %>

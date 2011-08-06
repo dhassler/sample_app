@@ -8,7 +8,7 @@ class WelcomeController < ApplicationController
     if @restaurants.empty?
       @restaurants = Restaurant.all[0..4]
     end
-    flash[:notice] = "No results found, returning 5 other results"
+    flash.now[:notice] = "No results found in your area, returning 5 other results"
     render :results
   end
 

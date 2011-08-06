@@ -20,6 +20,13 @@ namespace :db do
       desserts = restaurant.menu_sections.create!(:name => "Desserts")
       desserts.menu_items.create!(:name => "Chocolate Explosion", :price => 3.99)
       desserts.menu_items.create!(:name => "Carrot Cake", :price => 2.99)
+      
+      user = User.create!(:email => "rest" + restaurant.id.to_s, :password => "password", 
+                      :password_confirmation => "password", :restaurant_id => restaurant.id)
     end 
+    
+    user = User.new(:email => "admin", :password => "admin", :password_confirmation => "admin")
+    user.admin = true
+    user.save
   end
 end

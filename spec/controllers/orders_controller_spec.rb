@@ -20,7 +20,7 @@ describe OrdersController do
         order_items[item.id.to_s] = "1"
       end
       
-      post :new, :order => { :order_items => order_items }
+      post :new, :order_items => order_items
       response.should be_success
     end
   end

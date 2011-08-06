@@ -1,5 +1,6 @@
 class RestaurantsController < ApplicationController
-
+  before_filter :authenticate, :only => [:new, :create]
+  
   def index
     @restaurants = Restaurant.all
 
@@ -12,8 +13,8 @@ class RestaurantsController < ApplicationController
   def show
     @restaurant = Restaurant.find(params[:id])
     
-    @order = session[:current_order] ||= Order.new
-    
+    @order = Order.new
+        
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @restaurant }
@@ -54,4 +55,14 @@ class RestaurantsController < ApplicationController
 
     redirect_to restaurants_url
   end
+  
+  def orders
+    
+  end
+  
+  private
+
+   def authenticate
+     deny_access unless current_user && current_user.admin
+   end
 end

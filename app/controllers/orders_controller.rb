@@ -1,12 +1,13 @@
-class OrdersController < ApplicationController
-
-  require 'yaml'
-  
+class OrdersController < ApplicationController  
   def new
     @order_items = params[:order_items]
     @order_items.delete_if{ |key,value| value.to_i <= 0 }
+  
     @order_items_formatted = create_formatted_order_items(@order_items)
-    @order = Order.new(:order_items => @order_items)
+   
+    @order = Order.new(params[:order])
+    @order.order_items = @order_items
+    
     render 'delivery'
   end
 
