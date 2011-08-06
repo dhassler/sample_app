@@ -1,2 +1,1 @@
-
-<%= f.text_field :order_items[menu_item.id.to_s], :size => 2 %><%= menu_item.name%> <%= menu_item.price %><br/>
+<%= f.text_field :order_items[menu_item.id.to_s], :size => 2 %> &nbsp; <%= menu_item.name %> <%= number_to_currency(menu_item.price.to_float) %><br/>

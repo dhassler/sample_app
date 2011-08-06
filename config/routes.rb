@@ -6,6 +6,9 @@ SampleApp::Application.routes.draw do
     end
   end
   
+  resources :menu_sections
+  resources :menu_items
+  
   resources :sessions, :only => [:new, :create, :destroy]
   resources :users,    :only => [:new, :create]
   

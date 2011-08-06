@@ -4,16 +4,34 @@
 
 <%= hidden_field_tag "order[restaurant_id]", @restaurant.id %>
 
+<div id="sections_wrapper">
 <% @restaurant.menu_sections.each do |section| %>
 
 	<div class="menusection"><%= section.name %></div>
-
+	<div id="section<%= section.id %>">
 	<% section.menu_items.each do |menu_item| %>
-	<%= text_field_tag "order_items[" + menu_item.id.to_s + "]",nil, :size => 2 %><%= menu_item.name %> <%= menu_item.price %><br/>
+		<%= text_field_tag "order_items[" + menu_item.id.to_s + "]",nil, :size => 2 %><%= menu_item.name %> <%= menu_item.price %><br/>
 	<% end %>
+	</div>
 
 <% end %>
+</div>
+
 
 <%= submit_tag "Submit order" %>
 <% end %>
 
+<% if (current_user && current_user.restaurant == @restaurant) || (current_user && current_user.admin) %>
+<%= form_for @restaurant.menu_sections.build, :remote => true do |f| %>
+	<%= f.text_field :name %>
+	<%= f.hidden_field :restaurant_id %>
+	<%= f.submit "Create new menu section" %>
+<% end %>
+
+<%= form_for MenuItem.new, :remote => true do |f| %>
+	Name: <%= f.text_field :name %> Price: $<%= f.text_field :price, :size => 2 %>
+	<%= f.collection_select :menu_section_id, @restaurant.menu_sections, :id, :name %>
+	<%= f.submit "Create new menu item" %>
+<% end %>
+
+<% end %>
