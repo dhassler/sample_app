@@ -1,6 +1,11 @@
 class OrdersController < ApplicationController
   def new
-    @order = Order.new(params[:order])
+    @order_items = params[:order_items]
+    @order_items_formatted = Hash.new
+    @order_items.each do |item_id, qty|
+      @order_items_formatted[MenuItem.find(item_id)] = qty if qty.to_i > 0
+    end
+    @order = Order.new(:order_items => @order_items)
     render 'delivery'
   end
 
