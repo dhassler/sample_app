@@ -21,17 +21,6 @@ class OrdersController < ApplicationController
       flash.now[:error] = "Please supply name and phone"
       render 'delivery'
     end
-  end
-  
-  private
-
-  def create_formatted_order_items(order_items)
-    order_items_formatted = Hash.new
-    order_items.each do |item_id, qty|
-      order_items_formatted[MenuItem.find(item_id)] = qty.to_i
-    end
-    order_items_formatted
-  end
-  
+  end  
 end
 

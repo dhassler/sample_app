@@ -4,5 +4,7 @@ class Order < ActiveRecord::Base
   validates :name, :presence => true
   validates :phone, :presence => true
   belongs_to :restaurant
+  
+  default_scope order("created_at DESC")
 end
 

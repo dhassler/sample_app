@@ -10,7 +10,7 @@
 	<div class="menusection"><%= section.name %></div>
 	<div id="section<%= section.id %>">
 	<% section.menu_items.each do |menu_item| %>
-		<%= text_field_tag "order_items[" + menu_item.id.to_s + "]",nil, :size => 2 %><%= menu_item.name %> <%= menu_item.price %><br/>
+		<%= render :partial => "restaurants/menu_item", :object => menu_item %>
 	<% end %>
 	</div>
 

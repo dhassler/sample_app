@@ -1,3 +1,5 @@
+require 'orders_helper'
+
 class RestaurantsController < ApplicationController
   before_filter :authenticate, :only => [:new, :create]
   
@@ -57,7 +59,9 @@ class RestaurantsController < ApplicationController
   end
   
   def orders
-    
+    @orders = Order.find_all_by_restaurant_id(params[:id])
+    @order_items = []
+    @orders.collect{|o| o.order_items.each_pair{|k,v| @order_items <<  v + " x " + MenuItem.find(k).name } }
   end
   
   private
