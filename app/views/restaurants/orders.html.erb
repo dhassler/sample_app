@@ -1,0 +1,18 @@
+<h2>Recent Orders</h2>
+
+<table>
+	<% @orders.each do |o| %>
+		<tr>
+			<td><%= l o.created_at, :format => :long  %></td>
+			<td><%= o.name %></td>
+			<td><%= o.phone %></td>
+			<td>
+				<ul>
+					<% for oi in @order_items[o.id] %>
+						<li><%= oi %></li>
+					<% end %>
+				</ul>
+			</td>
+		</tr>
+	<% end %>
+</table>

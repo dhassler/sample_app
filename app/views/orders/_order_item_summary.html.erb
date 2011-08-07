@@ -1,0 +1,20 @@
+<h3>Items</h3>
+<table>
+	<tr>
+		<th>Item</th>
+		<th>Quantity</th>
+		<th>Price</th>
+		<th>Subtotal</th>
+	</tr>
+	<% order_total = 0.0 %>
+	<% @order_items_formatted.each do |item,qty| %>
+		<% order_total += item.price * qty %>
+		<tr>
+			<td><%= item.name %></td>
+			<td><%= qty %></td>
+			<td>$<%= item.price %></td>
+			<td>$<%= item.price * qty %></td>
+		</tr>
+	<% end %>
+	<tr><td colspan="3">Order total:</td><td>$<%= order_total %></td></tr>
+</table>

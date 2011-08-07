@@ -1,0 +1,67 @@
+# Logfile created on 2011-08-06 05:50:53 -0600 by logger.rb/25413
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: POST /orders/new with {"utf8"=>"✓", "order_items"=>{"1"=>"1", "2"=>"1", "3"=>"1"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/restaurants/1"}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: POST /orders/new with {"utf8"=>"✓", "order_items"=>{"1"=>"1", "2"=>"1", "3"=>"1"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/restaurants/1"}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: POST /orders/new with {"utf8"=>"✓", "order_items"=>{"1"=>"1", "2"=>"1", "3"=>"1"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/restaurants/1"}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: POST /orders/new with {"utf8"=>"✓", "order_items"=>{"1"=>"1", "2"=>"1", "3"=>"1"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/restaurants/1"}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: POST /orders/new with {"utf8"=>"✓", "order_items"=>{"1"=>"1", "2"=>"1", "3"=>"1"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/restaurants/1"}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: POST /orders/new with {"utf8"=>"✓", "order_items"=>{"1"=>"1", "2"=>"1", "3"=>"1"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/restaurants/1"}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: POST /orders/new with {"utf8"=>"✓", "order_items"=>{"1"=>"1", "2"=>"1", "3"=>"1"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/restaurants/1"}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: POST /orders/new with {"utf8"=>"✓", "order_items"=>{"1"=>"1", "2"=>"1", "3"=>"1"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/restaurants/1"}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: POST /orders/new with {"utf8"=>"✓", "order_items"=>{"1"=>"1", "2"=>"1", "3"=>"1"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/restaurants/1"}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: POST /orders/new with {"utf8"=>"✓", "order_items"=>{"1"=>"1", "2"=>"1", "3"=>"1"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/restaurants/1"}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: POST /orders/new with {"utf8"=>"✓", "order_items"=>{"1"=>"1", "2"=>"1", "3"=>"1"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/restaurants/1"}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: POST /orders/new with {"utf8"=>"✓", "order_items"=>{"1"=>"1", "2"=>"1", "3"=>"1"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/restaurants/1"}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: POST /orders/new with {"utf8"=>"✓", "order_items"=>{"1"=>"1", "2"=>"1", "3"=>"1"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/restaurants/1"}
+REQUESTING PAGE: POST /orders/save with {"utf8"=>"✓", "order"=>{"order_items"=>"{\"1\"=>\"1\", \"2\"=>\"1\", \"3\"=>\"1\"}", "name"=>"Joe Jones", "phone"=>"123-123-1234"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/orders/new"}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: POST /orders/new with {"utf8"=>"✓", "order"=>{"restaurant_id"=>""}, "order_items"=>{"1"=>"1", "2"=>"1", "3"=>"1"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/restaurants/1"}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: POST /orders/new with {"utf8"=>"✓", "order"=>{"restaurant_id"=>""}, "order_items"=>{"1"=>"1", "2"=>"1", "3"=>"1"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/restaurants/1"}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: POST /orders/new with {"utf8"=>"✓", "order"=>{"restaurant_id"=>"1"}, "order_items"=>{"1"=>"1", "2"=>"1", "3"=>"1"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/restaurants/1"}
+REQUESTING PAGE: POST /orders/save with {"utf8"=>"✓", "order"=>{"restaurant_id"=>"1", "order_items"=>"{\"1\"=>\"1\", \"2\"=>\"1\", \"3\"=>\"1\"}", "name"=>"Joe Jones", "phone"=>"123-123-1234"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/orders/new"}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: POST /orders/new with {"utf8"=>"✓", "order"=>{"restaurant_id"=>"1"}, "order_items"=>{"1"=>"1", "2"=>"1", "3"=>"1"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/restaurants/1"}
+REQUESTING PAGE: POST /orders/save with {"utf8"=>"✓", "order"=>{"restaurant_id"=>"1", "order_items"=>"{\"1\"=>\"1\", \"2\"=>\"1\", \"3\"=>\"1\"}", "name"=>"Joe Jones", "phone"=>"123-123-1234"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/orders/new"}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: POST /orders/new with {"utf8"=>"✓", "order"=>{"restaurant_id"=>"1"}, "order_items"=>{"1"=>"1", "2"=>"1", "3"=>"1"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/restaurants/1"}
+REQUESTING PAGE: POST /orders/save with {"utf8"=>"✓", "order"=>{"restaurant_id"=>"1", "order_items"=>"{\"1\"=>\"1\", \"2\"=>\"1\", \"3\"=>\"1\"}", "name"=>"Joe Jones", "phone"=>"123-123-1234"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/orders/new"}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: POST /orders/new with {"utf8"=>"✓", "order"=>{"restaurant_id"=>"1"}, "order_items"=>{"1"=>"1", "2"=>"1", "3"=>"1"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/restaurants/1"}
+REQUESTING PAGE: POST /orders/save with {"utf8"=>"✓", "order"=>{"restaurant_id"=>"1", "order_items"=>"{\"1\"=>\"1\", \"2\"=>\"1\", \"3\"=>\"1\"}", "name"=>"Joe Jones", "phone"=>"123-123-1234"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/orders/new"}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: POST /orders/new with {"utf8"=>"✓", "order"=>{"restaurant_id"=>"1"}, "order_items"=>{"1"=>"1", "2"=>"1", "3"=>"1"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/restaurants/1"}
+REQUESTING PAGE: POST /orders/save with {"utf8"=>"✓", "order"=>{"restaurant_id"=>"1", "order_items"=>"{\"1\"=>\"1\", \"2\"=>\"1\", \"3\"=>\"1\"}", "name"=>"Joe Jones", "phone"=>"123-123-1234"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/orders/new"}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: POST /orders/new with {"utf8"=>"✓", "order"=>{"restaurant_id"=>"1"}, "order_items"=>{"1"=>"1", "2"=>"1", "3"=>"1"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/restaurants/1"}
+REQUESTING PAGE: POST /orders/save with {"utf8"=>"✓", "order"=>{"restaurant_id"=>"1", "order_items"=>"{\"1\"=>\"1\", \"2\"=>\"1\", \"3\"=>\"1\"}", "name"=>"Joe Jones", "phone"=>"123-123-1234"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/orders/new"}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: POST /orders/new with {"utf8"=>"✓", "order"=>{"restaurant_id"=>"1"}, "order_items"=>{"1"=>"1", "2"=>"1", "3"=>"1"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/restaurants/1"}
+REQUESTING PAGE: POST /orders/save with {"utf8"=>"✓", "order"=>{"restaurant_id"=>"1", "order_items"=>"{\"1\"=>\"1\", \"2\"=>\"1\", \"3\"=>\"1\"}", "name"=>"Joe Jones", "phone"=>"123-123-1234"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/orders/new"}
+REQUESTING PAGE: GET /restaurants/1 with {} and HTTP headers {}
+REQUESTING PAGE: POST /orders/new with {"utf8"=>"✓", "order"=>{"restaurant_id"=>"1"}, "order_items"=>{"1"=>"1", "2"=>"1", "3"=>"1"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/restaurants/1"}
+REQUESTING PAGE: POST /orders/save with {"utf8"=>"✓", "order"=>{"restaurant_id"=>"1", "order_items"=>"{\"1\"=>\"1\", \"2\"=>\"1\", \"3\"=>\"1\"}", "name"=>"Joe Jones", "phone"=>"123-123-1234"}, "commit"=>"Submit order"} and HTTP headers {"HTTP_REFERER"=>"/orders/new"}
