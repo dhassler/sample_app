@@ -33,6 +33,42 @@ describe RestaurantsController do
       response.should have_selector("div.menusection", :content => restaurant.menu_sections[2].name)
     end    
   end
+  
+  describe "menu item upload" do
+    
+    describe "GET 'upload'" do
+       it "should be successful" do
+         restaurant = Restaurant.create! valid_attributes
+         get :upload, :id => restaurant.id.to_s
+         response.should be_successful
+       end
+       
+       it "should have an upload field" do
+         restaurant = Restaurant.create! valid_attributes
+         get :upload, :id => restaurant.id.to_s
+         response.should have_selector("input", :type => "file", :name => "file")
+       end
+     end
+
+     # Got to figure out how to create a http uploaded file object
+     # describe "POST 'import'" do
+     #       it "should create new menu sections" do
+     #         @restaurant = Restaurant.create! valid_attributes
+     #         test_file = File.join(Rails.root, '/spec/test_data.csv')
+     #         expect {
+     #           post :import, { :id => @restaurant.id.to_s, :file => test_file }
+     #         }.to change { MenuSection.count }.by(2)
+     #       end
+     #       
+     #        it "should create new menu items" do
+     #          @restaurant = Restaurant.create! valid_attributes
+     #          test_file = File.join(Rails.root, '/spec/test_data.csv')
+     #          expect {
+     #            post :import, { :id => @restaurant.id.to_s, :file => test_file }
+     #          }.to change { MenuItem.count }.by(4)
+     #        end
+     #     end
+  end
 end
 
 

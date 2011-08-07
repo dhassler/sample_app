@@ -3,6 +3,8 @@ SampleApp::Application.routes.draw do
   resources :restaurants do
     member do
       get 'orders'
+      get 'upload'
+      post 'import'
     end
   end
   

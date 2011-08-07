@@ -11,7 +11,7 @@ describe WelcomeController do
     
     it "should say welcome" do
       get :index
-      response.should have_selector("h1", :content => "Welcome")
+      response.should have_selector("h2", :content => "Welcome")
     end
     
     it "should have a search box" do

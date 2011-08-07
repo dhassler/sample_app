@@ -2,6 +2,7 @@ require 'orders_helper'
 
 class RestaurantsController < ApplicationController
   before_filter :authenticate, :only => [:new, :create]
+  before_filter :authenticate_restaurant_user, :only => [:orders, :upload, :import]
   
   def index
     @restaurants = Restaurant.all
@@ -60,13 +61,37 @@ class RestaurantsController < ApplicationController
   
   def orders
     @orders = Order.find_all_by_restaurant_id(params[:id])
-    @order_items = []
-    @orders.collect{|o| o.order_items.each_pair{|k,v| @order_items <<  v + " x " + MenuItem.find(k).name } }
+    @order_items = {}
+    @orders.each{|o| @order_items[o.id] = []; o.order_items.each_pair{|k,v| @order_items[o.id] <<  v + " x " + MenuItem.find(k).name } }
+  end
+  
+  def upload 
+  end
+  
+  def import
+    @restaurant = Restaurant.find(params[:id])
+    file = params[:file]
+    open(file.path).each { |line| process_import_line(line, @restaurant) }
+    redirect_to @restaurant
   end
   
   private
 
    def authenticate
      deny_access unless current_user && current_user.admin
+   end
+   
+   def authenticate_restaurant_user
+     if current_user && current_user.restaurant == Restaurant.find(params[:id])
+      return
+    else
+      authenticate
+    end
+   end
+   
+   def process_import_line(line, restaurant)
+     (section, name, price) = line.split(',')
+     restaurant.menu_sections.create!({:name => section}) unless restaurant.has_menu_section?(section)
+     MenuSection.find_by_restaurant_id_and_name(restaurant.id, section).menu_items.create!(:name => name, :price => price)
    end
 end
